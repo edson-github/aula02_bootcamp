@@ -91,9 +91,14 @@ print(numero1 != numero2)
 
 # #### try-except e if
 
-# 21: Conversor de Temperatura
+# 21: Conversor de Temperatura com try-except
 numero = float(input("Digite a temperatura em Celsius: "))
-print((numero * 9/5) + 32)
+try:
+    numero = float(numero)
+except ValueError:
+    print("O valor digitado não é um número válido")
+
+
 # 22: Verificador de Palíndromo
 palavra = input("Digite uma palavra: ")
 print(palavra == palavra[::-1])
